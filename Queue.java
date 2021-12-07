@@ -43,8 +43,9 @@ class Queue {
     }
 
     // Return the number of elements in queue.
-    public boolean size() {
-        return false;
+    // Time complexity: O(1), space complexity: 0
+    public int size() {
+        return stack1.size()+stack2.size();
     }
     
     public static void main(String[] args) {
