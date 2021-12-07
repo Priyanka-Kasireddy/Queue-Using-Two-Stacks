@@ -16,10 +16,10 @@ class Queue {
     // Push element x to the back of queue.
     //Time Complexity: O(N),  space complexity: O(1)
     public void enqueue(int x) {
-        while(!stack1.isEmpty())
+        if(!stack1.isEmpty())
         stack2.push(stack1.pop());
         stack2.push(x);
-        while(!stack2.isEmpty())
+        if(!stack2.isEmpty())
         stack1.push(stack2.pop());
     }
 
@@ -37,8 +37,9 @@ class Queue {
     }
     
     // Return whether the queue is empty.
+    // Time complexity: O(1), space complexity: 0
     public boolean empty() {
-        return false;
+        return stack1.isEmpty() && stack2.isEmpty();
     }
 
     // Return the number of elements in queue.
