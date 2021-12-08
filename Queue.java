@@ -16,10 +16,10 @@ class Queue {
     // Push element x to the back of queue.
     //Time Complexity: O(N),  space complexity: O(1)
     public void enqueue(int x) {
-        if(!stack1.isEmpty())
+        while(!stack1.isEmpty())
         stack2.push(stack1.pop());
         stack2.push(x);
-        if(!stack2.isEmpty())
+        while(!stack2.isEmpty())
         stack1.push(stack2.pop());
     }
 
