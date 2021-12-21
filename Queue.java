@@ -24,13 +24,15 @@ class Queue {
     }
 
     // Removes the element from in front of queue.
+    // Time complexity : O(1), space complexity: O(N)
     public int dequeue() {
-        return 0;
+        return stack1.pop();
     }
+    //dequeue
     
     // Get the front element.
     public int peek() {
-        return 0;
+        return  0;
     }
     
     // Return whether the queue is empty.
